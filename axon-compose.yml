@@ -1,0 +1,11 @@
+services:
+  axonserver:
+    image: axoniq/axonserver:latest
+    container_name: axonserver
+    ports:
+      - "8024:8024"  # Porta para a interface de gerenciamento
+      - "8124:8124"  # Porta para comunicação entre os aplicativos e o Axon Server
+    volumes:
+      - "C:/Users/paulo/Documents/Estudos/AxonData/data:/axonserver/data"
+      - "C:/Users/paulo/Documents/Estudos/AxonData/events:/axonserver/events"
+      - "C:/Users/paulo/Documents/Estudos/AxonData/config:/axonserver/config"
